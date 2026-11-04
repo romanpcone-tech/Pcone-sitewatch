@@ -1,0 +1,80 @@
+{
+  "version": "2026-11-04",
+  "source": "docs/OWNER-CANON-20261104.md",
+  "approved_by": "Roman (owner), 2026-11-04",
+  "rule_of_thumb": "Rules read this file. Never hardcode facts in code. If a fact is missing here, do not invent it — raise it as a question.",
+  "priority_order": [
+    "never a false 'all clean'",
+    "zero false positives on a clean copy",
+    "speed/cost"
+  ],
+  "site": {
+    "base": "https://pconelab.co.il",
+    "languages": ["ru", "he", "en", "ar", "fr"],
+    "business": "independent computer and laptop repair shop + store, Netanya, Israel",
+    "not_authorized_apple_service": true
+  },
+  "hours": {
+    "timezone": "Asia/Jerusalem",
+    "sun": {"open": "09:00", "close": "19:00", "break": ["13:30", "15:00"]},
+    "mon_thu": {"open": "10:00", "close": "19:00", "break": ["13:30", "15:00"]},
+    "fri": {"open": "09:00", "close": "14:00", "break": null},
+    "sat": "closed",
+    "break_weekdays": ["sun", "mon", "tue", "wed", "thu"],
+    "break_not_weekdays": ["fri", "sat"],
+    "defect_if_labelled": ["пн-чт", "ב׳-ה׳"],
+    "check_in": ["visible text (all 5 languages)", "JSON-LD openingHours"],
+    "note": "Lunch break belongs to Sun-Thu. Labelling the break as 'пн-чт' / 'ב׳-ה׳' is a defect."
+  },
+  "contacts": {
+    "phone": "09-8345676",
+    "address": {"street": "Pinhas Lavon 18", "city": "Netanya"},
+    "email": "ron@pcone.co.il",
+    "defect_emails": ["info@pconelab.co.il"]
+  },
+  "meta": {
+    "no_prices_in": ["meta description", "og:description", "twitter:description"],
+    "applies_to": "everywhere, AV product pages included",
+    "only_allowed_price": {"id": "diagnostics", "amount": 200, "currency": "ILS", "unit": "₪"}
+  },
+  "price_facts": [
+    {"id": "diagnostics", "text_ru": "диагностика 200 ₪", "amount": 200, "currency": "ILS", "kind": "exact"},
+    {"id": "board_diagnostics", "text_ru": "диагностика платы 300 ₪", "amount": 300, "currency": "ILS", "kind": "exact"},
+    {"id": "data_recovery", "text_ru": "восстановление данных от 400 ₪", "amount": 400, "currency": "ILS", "kind": "from"},
+    {"id": "gpu_servicing", "text_ru": "обслуживание видеокарты 350–750 ₪", "min": 350, "max": 750, "currency": "ILS", "kind": "range"},
+    {"id": "phone_water_damage", "text_ru": "телефон после воды от 350 ₪", "amount": 350, "currency": "ILS", "kind": "from"},
+    {"id": "screen_prices", "text_ru": "цены на экраны — только «от N ₪»", "kind": "from_only"}
+  ],
+  "price_fact_policy": "Flag contradictions between body text and this list. Never invent other prices.",
+  "banned": [
+    {"id": "urgent_diagnostics", "patterns": ["срочная диагностика", "экспресс-диагностика", "urgent diagnostics", "express diagnostics", "אבחון דחוף"], "severity": "critical"},
+    {"id": "within_4_hours", "patterns": ["в течение 4 часов", "within 4 hours", "תוך 4 שעות"], "severity": "critical"},
+    {"id": "repairs_count_5000", "patterns": ["5000+ ремонтов", "5,000+ repairs", "מעל 5,000 תיקונים"], "replacement_ru": "с 2007 года", "severity": "critical"},
+    {"id": "used_device_buying", "patterns": ["идём на скупку", "купим б/у", "trade-in", "buy2sell", "יד שנייה לקנייה"], "severity": "critical"},
+    {"id": "authorized_apple", "patterns": ["авторизованный сервис Apple", "authorized Apple service", "מעבדה מורשית אפל"], "severity": "critical"},
+    {"id": "old_header_blue_strip", "description": "old site header with the blue strip must not exist anywhere; Arena header only", "severity": "critical"}
+  ],
+  "warranty": {
+    "ru": "Гарантия на работу и на детали. На детали — до 3 лет в зависимости от типа детали; на работу — всегда, по типу ремонта. Восстановление данных не гарантируется.",
+    "severity": "critical",
+    "note": "Apple warranty wording; deviations reported, not auto-fixed unless the rule is explicitly a safe_auto."
+  },
+  "free_claims": {"action": "report_only", "note": "«бесплатно» / free claims are an owner decision — never auto-fix"},
+  "allowlist_seed": [
+    {"rule_hint": "old_header_blue_strip", "url": "/gta6/article-regional-versions*", "reason": "keeps its old header by owner decision", "owner_date": "2026-11-04"},
+    {"rule_hint": "used_device_buying", "url": "footer link «Б/у техника»", "reason": "stays by owner decision 2026-10-27, not a trade-in defect", "owner_date": "2026-10-27"},
+    {"rule_hint": "*", "url": "/gta-rp/* (5 languages)", "reason": "pages are never edited; findings reported as info only, never safe_auto", "owner_date": "2026-11-04", "mode": "report_only"}
+  ],
+  "severity": {
+    "critical": ["wrong hours", "wrong phone", "wrong email", "price in meta", "old header", "banned claim", "page 4xx/5xx", "header/menu overflow at 390px width"],
+    "high": ["broken asset", "broken link", "JSON-LD invalid", "hreflang mismatch", "missing language page", "cache-bust missing"],
+    "medium_info": "everything else"
+  },
+  "incident_context": [
+    "old header returning after publish",
+    "wrong hours after publish",
+    "prices leaking into meta descriptions",
+    "header wider than screen on mobile",
+    "stale CSS cache hiding a fix"
+  ]
+}
