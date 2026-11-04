@@ -1,0 +1,12 @@
+[project]
+name = "pcone-sitewatch"
+version = "2.0.0"
+description = "Read-only detector for pconelab.co.il"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.scripts]
+pcone-sitewatch = "pcone_sitewatch.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

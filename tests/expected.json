@@ -1,0 +1,68 @@
+{
+  "findings": [
+    {
+      "rule_id": "HOURS_TEXT",
+      "url": "https://pconelab.co.il/ru/hours.html"
+    },
+    {
+      "rule_id": "HOURS_JSONLD",
+      "url": "https://pconelab.co.il/ru/hours-json.html"
+    },
+    {
+      "rule_id": "CONTACT",
+      "url": "https://pconelab.co.il/en/contact.html"
+    },
+    {
+      "rule_id": "META_PRICE",
+      "url": "https://pconelab.co.il/en/meta.html"
+    },
+    {
+      "rule_id": "PRICE_FACT",
+      "url": "https://pconelab.co.il/ru/price.html"
+    },
+    {
+      "rule_id": "BANNED_CLAIM",
+      "url": "https://pconelab.co.il/ru/banned.html"
+    },
+    {
+      "rule_id": "OLD_HEADER",
+      "url": "https://pconelab.co.il/en/header.html"
+    },
+    {
+      "rule_id": "WARRANTY_RU",
+      "url": "https://pconelab.co.il/ru/warranty.html"
+    },
+    {
+      "rule_id": "FREE_CLAIM",
+      "url": "https://pconelab.co.il/ru/free.html"
+    },
+    {
+      "rule_id": "ASSET_404",
+      "url": "https://pconelab.co.il/fr/asset.html"
+    },
+    {
+      "rule_id": "LINK_BROKEN",
+      "url": "https://pconelab.co.il/ar/link.html"
+    },
+    {
+      "rule_id": "LANG_404",
+      "url": "https://pconelab.co.il/lang-only.html"
+    },
+    {
+      "rule_id": "HREFLANG",
+      "url": "https://pconelab.co.il/about.html"
+    },
+    {
+      "rule_id": "CACHE_BUST",
+      "url": "https://pconelab.co.il/cache.html"
+    },
+    {
+      "rule_id": "JSONLD",
+      "url": "https://pconelab.co.il/jsonld.html"
+    },
+    {
+      "rule_id": "PAGE_4XX",
+      "url": "https://pconelab.co.il/missing-page.html"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Format: rule_id | url | reason | who, date
+# '*' is forbidden and the line is ignored. A line with an empty reason does nothing.
+# /gta-rp/* is not listed: canon allowlist_seed uses rule '*', which this format forbids.
+# Those pages are report_only (info, never safe_auto) inside the detector.
+
+OLD_HEADER | https://pconelab.co.il/gta6/article-regional-versions.html | keeps its old header by owner decision | Roman, 2026-11-04
+OLD_HEADER | https://pconelab.co.il/ru/gta6/article-regional-versions.html | keeps its old header by owner decision | Roman, 2026-11-04
+OLD_HEADER | https://pconelab.co.il/en/gta6/article-regional-versions.html | keeps its old header by owner decision | Roman, 2026-11-04
+OLD_HEADER | https://pconelab.co.il/fr/gta6/article-regional-versions.html | keeps its old header by owner decision | Roman, 2026-11-04
+OLD_HEADER | https://pconelab.co.il/ar/gta6/article-regional-versions.html | keeps its old header by owner decision | Roman, 2026-11-04
+
+# Footer link «Б/у техника» (Roman, 2026-10-27) is not a trade-in defect.
+# It is not one exact page URL, so it is not an allowlist line; BANNED_CLAIM reads allowlist_seed.
