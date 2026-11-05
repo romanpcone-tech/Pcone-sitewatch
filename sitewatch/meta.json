@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "mode": "fast",
+  "started_at": "2026-11-05T04:00:28+02:00",
+  "ended_at": "2026-11-05T04:00:28+02:00",
+  "urls_checked": 544,
+  "canon_sha256": "7d7ab4de92f842944542293343d95574a39504b4483beb1ca9e46566f78eeb36",
+  "status": "ok",
+  "last_run_utc": "2026-11-05T02:08:17+00:00",
+  "last_nightly_utc": "",
+  "geometry": "",
+  "rules_version": "v2"
+}
