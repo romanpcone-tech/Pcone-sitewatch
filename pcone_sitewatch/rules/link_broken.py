@@ -12,6 +12,9 @@ def check(page, canon: dict) -> list[Finding]:
         raw = link["raw"]
         if not raw or raw.startswith(("#", "mailto:", "tel:", "javascript:")):
             continue
+        # ссылки вида "/tel:+972…" — тоже телефон, а не путь к странице
+        if raw.lstrip("/").lower().startswith(("tel:", "mailto:", "javascript:", "data:")):
+            continue
         if is_asset_ref(raw):
             continue
         target = urlsplit(link["url"])
