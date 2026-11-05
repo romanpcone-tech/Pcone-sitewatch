@@ -26,21 +26,36 @@ def render(findings: list[Finding], urls_checked: int, stale_rows: list[Allow] |
         f"<p>Проверено адресов: {urls_checked}. Критичных: {len(critical)}.</p>",
         f"<p>скрыто по allowlist: {len(hidden)}</p>",
     ]
-    if critical:
-        parts.append("<h2>Критичное</h2>")
+    by_rule: dict[str, list] = {}
     for item in visible:
-        klass = "card bad" if item.severity == "critical" else "card"
-        parts.append(
-            f"<section class='{klass}'><b>{html.escape(item.severity)} {html.escape(item.rule_id)}</b>"
-            f"<div><a href='{html.escape(item.url)}'>{html.escape(item.url)}</a></div>"
-            f"<pre>{html.escape(item.evidence)}</pre></section>"
-        )
+        by_rule.setdefault(item.rule_id, []).append(item)
+    parts.append("<h2>По правилам</h2><ul>")
+    for rule, items in sorted(by_rule.items(), key=lambda kv: -len(kv[1])):
+        parts.append(f"<li>{html.escape(rule)}: {len(items)}</li>")
+    parts.append("</ul>")
+    for rule, items in sorted(by_rule.items(), key=lambda kv: -len(kv[1])):
+        parts.append(f"<h2>{html.escape(rule)} — {len(items)}</h2>")
+        for item in items[:30]:
+            klass = "card bad" if item.severity == "critical" else "card"
+            parts.append(
+                f"<section class='{klass}'><b>{html.escape(item.severity)} {html.escape(item.rule_id)}</b>"
+                f"<div><a href='{html.escape(item.url)}'>{html.escape(item.url)}</a></div>"
+                f"<pre>{html.escape(item.evidence)}</pre></section>"
+            )
+        if len(items) > 30:
+            parts.append(f"<p>…и ещё {len(items) - 30} таких же</p>")
     parts.append("<h2>Повторяется: искать в шаблоне</h2>")
     if not repeated:
         parts.append("<p>Нет.</p>")
+    grouped: dict[tuple, int] = {}
     for item in repeated:
-        where = item.shared_file or ", ".join(item.shared_urls) or item.url
-        parts.append(f"<p>{html.escape(item.rule_id)}: {html.escape(where)}</p>")
+        where = item.shared_file or (item.shared_urls[0] if item.shared_urls else item.url)
+        key = (item.rule_id, where)
+        grouped[key] = grouped.get(key, 0) + 1
+    for (rule, where), count in sorted(grouped.items(), key=lambda kv: -kv[1])[:40]:
+        parts.append(f"<p>{html.escape(rule)}: {html.escape(str(where))} — {count}</p>")
+    if len(grouped) > 40:
+        parts.append(f"<p>…и ещё {len(grouped) - 40} групп</p>")
     if show_stale:
         parts.append("<h2>проверить, ещё задумано?</h2>")
         if not stale_rows:
