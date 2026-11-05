@@ -24,8 +24,8 @@ _RANGES = [
     (re.compile(r"(?<![а-яё])пн\s*[-–—−]\s*чт(?![а-яё])", re.I), 1, 4),
     (re.compile(r"\bsun(?:day)?\s*[-–—−]\s*thu(?:rsday)?\b", re.I), 0, 4),
     (re.compile(r"\bmon(?:day)?\s*[-–—−]\s*thu(?:rsday)?\b", re.I), 1, 4),
-    (re.compile(r"\bdim(?:anche)?\s*[-–—−]\s*jeu(?:di)?\b", re.I), 0, 4),
-    (re.compile(r"\blun(?:di)?\s*[-–—−]\s*jeu(?:di)?\b", re.I), 1, 4),
+    (re.compile(r"\bdim(?:anche)?\.?\s*[-–—−]\s*jeu(?:di)?\.?", re.I), 0, 4),
+    (re.compile(r"\blun(?:di)?\.?\s*[-–—−]\s*jeu(?:di)?\.?", re.I), 1, 4),
     (re.compile(r"الأحد\s*[-–—−]\s*الخميس"), 0, 4),
     (re.compile(r"(?:الاثنين|الإثنين)\s*[-–—−]\s*الخميس"), 1, 4),
 ]
@@ -36,7 +36,13 @@ _SINGLES = [
     (re.compile(r"(?<![а-яё])ср(?![а-яё])", re.I), "wed"),
     (re.compile(r"(?<![а-яё])чт(?![а-яё])", re.I), "thu"),
     (re.compile(r"(?<![а-яё])пт(?![а-яё])", re.I), "fri"),
+    (re.compile(r"понедельник", re.I), "mon"),
+    (re.compile(r"вторник", re.I), "tue"),
+    (re.compile(r"сред[аыуе]", re.I), "wed"),
+    (re.compile(r"четверг", re.I), "thu"),
+    (re.compile(r"пятниц", re.I), "fri"),
     (re.compile(r"(?<![а-яё])сб(?![а-яё])", re.I), "sat"),
+    (re.compile(r"суббот", re.I), "sat"),
     (re.compile(r"\bsunday\b|\bsun\b", re.I), "sun"),
     (re.compile(r"\bmonday\b|\bmon\b", re.I), "mon"),
     (re.compile(r"\btuesday\b|\btue\b", re.I), "tue"),
@@ -117,6 +123,40 @@ def _norm_label(text: str) -> str:
     )
 
 
+def _events(segment: str) -> list[tuple[int, str, object]]:
+    """События сегмента по позициям: дни, интервалы, слова «закрыто» и «перерыв»."""
+    marks: list[tuple[int, int, str, object]] = []
+    for match in _HE_RANGE.finditer(segment):
+        a = _HE.get(match.group(1))
+        b = _HE.get(match.group(2))
+        if a is None or b is None:
+            continue
+        if a > b:
+            a, b = b, a
+        marks.append((match.start(), match.end(), "day", {ORDER[idx] for idx in range(a, b + 1)}))
+    for pattern, start_i, end_i in _RANGES:
+        for match in pattern.finditer(segment):
+            marks.append((match.start(), match.end(), "day", {ORDER[i] for i in range(start_i, end_i + 1)}))
+    for pattern, day in _SINGLES:
+        for match in pattern.finditer(segment):
+            marks.append((match.start(), match.end(), "day", {day}))
+    for match in _TIME.finditer(segment):
+        marks.append((match.start(), match.end(), "span", (_hh(match.group(1), match.group(2)), _hh(match.group(3), match.group(4)))))
+    for match in _CLOSED.finditer(segment):
+        marks.append((match.start(), match.end(), "closed", None))
+    for match in re.finditer(r"הפסקה|перерыв|перер|\bbreak\b|\blunch\b|\bpause\b|استراحة", _norm_label(segment)):
+        marks.append((match.start(), match.end(), "break", None))
+    marks.sort(key=lambda item: (item[0], -(item[1] - item[0])))
+    events: list[tuple[int, str, object]] = []
+    cursor = -1
+    for start_pos, end_pos, kind, value in marks:
+        if start_pos < cursor:
+            continue
+        events.append((start_pos, kind, value))
+        cursor = end_pos
+    return events
+
+
 def read_visible(text: str, canon: dict) -> dict:
     br = canon_break(canon)
     opens: dict[str, tuple[str, str]] = {}
@@ -126,22 +166,47 @@ def read_visible(text: str, canon: dict) -> dict:
     saw = False
     defect_labels = [_norm_label(item) for item in canon["hours"].get("defect_if_labelled") or []]
     for segment in segments(text):
-        days = _days(segment)
-        if days:
-            saw = True
-        spans = _spans(segment)
         norm = _norm_label(segment)
-        has_break_span = br in spans
-        if has_break_span and any(label in norm for label in defect_labels):
-            labelled_defect = True
-        if has_break_span:
-            break_ranges.append(br)
-            break_days |= days
-            spans = [span for span in spans if span != br]
-        if _CLOSED.search(segment) and "sat" in days and not spans:
-            opens["sat"] = ("closed", "closed")
-        for span in spans:
-            for day in days:
+        events = _events(segment)
+        last_days: set[str] = set()      # ближайшая метка дня перед текущей позицией
+        break_mark: int | None = None    # индекс слова «перерыв»
+        for idx, (_pos, kind, value) in enumerate(events):
+            if kind == "day":
+                last_days = set(value)  # type: ignore[arg-type]
+                saw = True
+                continue
+            if kind == "break":
+                break_mark = idx
+                continue
+            if kind == "closed":
+                if "sat" in last_days:
+                    opens["sat"] = ("closed", "closed")
+                continue
+            span: tuple[str, str] = value  # type: ignore[assignment]
+            if span == br and break_mark is not None:
+                # подпись дней для перерыва ищем: после слова «перерыв» → сразу после
+                # интервала → до слова «перерыв». Так работают оба формата:
+                # «ב׳-ה׳ … (הפסקה 13:30-15:00)» и «Перерыв 13:30-15:00, Пн-Чт».
+                days: set[str] = set()
+                for j in range(break_mark + 1, idx):
+                    if events[j][1] == "day":
+                        days = set(events[j][2])  # type: ignore[arg-type]
+                if not days:
+                    for j in range(idx + 1, len(events)):
+                        if events[j][1] == "day":
+                            days = set(events[j][2])  # type: ignore[arg-type]
+                            break
+                        if events[j][1] == "span":
+                            break
+                if not days:
+                    # день у перерыва не подписан — не приписываем его субботе наугад
+                    days = {day for day in last_days if day != "sat"}
+                break_ranges.append(br)
+                break_days |= days
+                if any(label in norm for label in defect_labels):
+                    labelled_defect = True
+                continue
+            for day in last_days:
                 if day == "sat":
                     continue
                 opens[day] = span
@@ -174,13 +239,13 @@ def visible_problem(read: dict, canon: dict) -> str | None:
     if read["labelled_defect"]:
         bad.append("break labelled " + "/".join(hours.get("defect_if_labelled") or []))
     needed = set(hours.get("break_weekdays") or [])
-    if read["break_ranges"]:
-        if not needed <= read["break_days"]:
-            bad.append("break days " + ",".join(sorted(read["break_days"])))
-        forbidden = set(hours.get("break_not_weekdays") or [])
+    forbidden = set(hours.get("break_not_weekdays") or [])
+    if read["break_ranges"] and read["break_days"]:
+        if read["break_days"] - needed - forbidden:
+            bad.append("break days " + ",".join(sorted(read["break_days"] - needed - forbidden)))
         if forbidden & read["break_days"]:
             bad.append("break on " + ",".join(sorted(forbidden & read["break_days"])))
-    elif read["saw"]:
+    elif read["saw"] and not read["break_ranges"]:
         bad.append("lunch break missing")
     if not bad:
         return None

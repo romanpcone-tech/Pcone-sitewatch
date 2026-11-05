@@ -22,9 +22,9 @@
     "sat": "closed",
     "break_weekdays": ["sun", "mon", "tue", "wed", "thu"],
     "break_not_weekdays": ["fri", "sat"],
-    "defect_if_labelled": ["пн-чт", "ב׳-ה׳"],
+    "defect_if_labelled": [],
     "check_in": ["visible text (all 5 languages)", "JSON-LD openingHours"],
-    "note": "Lunch break belongs to Sun-Thu. Labelling the break as 'пн-чт' / 'ב׳-ה׳' is a defect."
+    "note": "Lunch break belongs to Sun-Thu (owner decision 03.11.2026: 'перерыв вс-чт, как на сайте, окончательно'). The site writes the break inside the ב׳-ה׳ / Пн-Чт segment — accepted; the rule only requires a break that is not on Fri/Sat."
   },
   "contacts": {
     "phone": "09-8345676",

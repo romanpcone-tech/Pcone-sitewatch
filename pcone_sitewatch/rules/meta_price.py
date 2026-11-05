@@ -3,8 +3,9 @@ import re
 from pcone_sitewatch.canon import severity
 from pcone_sitewatch.finding import Finding
 
+_NUMBER = r"(?<![\d.,\u066b\u066c])(\d{1,3}(?:[,\u066c\u066b\u00a0 ]\d{3})+|\d{1,6})"
 _PRICE = re.compile(
-    r"(?:₪\s*(\d{1,6})|(\d{1,6})\s*₪|(\d{1,6})\s*ILS\b)",
+    rf"(?:₪\s*{_NUMBER}|{_NUMBER}\s*₪|{_NUMBER}\s*ILS\b)",
     re.I,
 )
 
@@ -18,8 +19,9 @@ def offending(text: str, canon: dict) -> list[str]:
     allowed = _allowed_amounts(canon)
     bad = []
     for match in _PRICE.finditer(text or ""):
-        number = next(group for group in match.groups() if group)
-        if number not in allowed:
+        # "3,056 ₪" must read as 3056, not as 056 (thousands separator).
+        digits = re.sub(r"\D", "", match.group(0))
+        if digits and digits not in allowed:
             bad.append(match.group(0).strip())
     return bad
 

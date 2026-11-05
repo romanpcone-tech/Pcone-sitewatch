@@ -28,17 +28,25 @@ def check(page, canon: dict) -> list[Finding]:
     facts.sort(reverse=True)
     found = []
     for match in _AMOUNT.finditer(visible):
-        start = max(0, match.start() - 48)
-        window = visible[start:match.end()]
+        # Метка должна стоять в том же куске текста: берём БЛИЖАЙШУЮ метку перед
+        # ценой и отбрасываем её, если между меткой и ценой уже стоит другой «₪».
+        # Так «Чистка 350 ₪» не читается как «Диагностика 350 ₪», но при этом
+        # «Диагностика (250 ₪)» и «Диагностика. 250 ₪» продолжают ловиться.
+        window_start = max(0, match.start() - 60)
+        window = visible[window_start : match.end()]
         low = window.lower()
         amount = int(match.group(1))
         amount_hi = int(match.group(2) or match.group(1))
         fact = None
+        best_pos = -1
         for _, prefix, item in facts:
-            if prefix.lower() in low:
-                fact = item
-                break
+            pos = low.rfind(prefix)
+            if pos != -1 and pos > best_pos:
+                best_pos, fact = pos, item
         if fact is None:
+            continue
+        between = low[best_pos : len(low) - len(match.group(0))]
+        if "₪" in between:
             continue
         kind = fact.get("kind")
         problem = None

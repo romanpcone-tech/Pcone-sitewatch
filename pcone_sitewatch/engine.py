@@ -11,7 +11,7 @@ from pcone_sitewatch.allowlist import is_report_only_url, load as load_allow, ma
 from pcone_sitewatch.canon import load as load_canon
 from pcone_sitewatch.canon import sha256 as canon_sha
 from pcone_sitewatch.finding import Finding
-from pcone_sitewatch.htmlutil import load_tree
+from pcone_sitewatch.htmlutil import iter_tree
 from pcone_sitewatch.report import digest_line, render, sunday
 from pcone_sitewatch.rules import check_page
 from pcone_sitewatch.rules.page_4xx import from_sitemap
@@ -28,8 +28,20 @@ def israel_now() -> datetime:
     return datetime.now(TZ)
 
 
+def _assets_of(page) -> set[str]:
+    refs = set()
+    for asset in page.parsed()["assets"]:
+        path = asset["url"].split("?", 1)[0]
+        if path.endswith((".css", ".js", ".mjs")):
+            refs.add(path)
+    return refs
+
+
 def annotate(findings: list[Finding], pages, canon: dict, allow_rows) -> list[Finding]:
-    by_url = {page.url: page for page in pages}
+    if isinstance(pages, dict):
+        asset_map = pages
+    else:
+        asset_map = {page.url: _assets_of(page) for page in pages}
     groups: dict[tuple, list[Finding]] = {}
     for finding in findings:
         if is_report_only_url(finding.url, canon):
@@ -44,34 +56,30 @@ def annotate(findings: list[Finding], pages, canon: dict, allow_rows) -> list[Fi
         urls = {item.url for item in items}
         if len(urls) < 3:
             continue
-        asset_sets = []
-        for url in urls:
-            page = by_url.get(url)
-            if page is None:
-                continue
-            refs = set()
-            for asset in page.parsed()["assets"]:
-                path = asset["url"].split("?", 1)[0]
-                if path.endswith((".css", ".js", ".mjs")):
-                    refs.add(path)
-            asset_sets.append(refs)
+        asset_sets = [asset_map[url] for url in urls if url in asset_map]
         shared = set.intersection(*asset_sets) if asset_sets else set()
         shared_file = sorted(shared)[0] if len(shared) == 1 else None
         for item in items:
             item.shared_count = len(urls)
             item.shared_file = shared_file
-            item.shared_urls = sorted(urls)
+            # список соседей обрезаем: без этого findings.jsonl раздувался до сотен МБ
+            item.shared_urls = sorted(urls)[:40]
     return findings
 
 
-def scan(root: Path, base: str, canon: dict, allow_rows) -> tuple[list[Finding], int]:
-    pages = load_tree(root, base)
+def scan(root: Path, base: str, canon: dict, allow_rows, only: set[str] | None = None) -> tuple[list[Finding], int]:
     found: list[Finding] = []
-    for page in pages:
+    asset_map: dict[str, set[str]] = {}
+    count = 0
+    for page in iter_tree(root, base, only):
         found.extend(check_page(page, canon))
+        asset_map[page.url] = _assets_of(page)
+        page.html = ""
+        page.view = {}
+        count += 1
     found.extend(from_sitemap(root, base, canon))
-    annotate(found, pages, canon, allow_rows)
-    return found, len(pages)
+    annotate(found, asset_map, canon, allow_rows)
+    return found, count
 
 
 def write_outputs(out: Path, findings: list[Finding], urls: int, canon_path: Path, mode: str, state: dict, allow_rows, when: datetime) -> None:

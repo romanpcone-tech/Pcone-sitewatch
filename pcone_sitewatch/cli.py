@@ -36,6 +36,7 @@ def main(argv: list[str] | None = None) -> int:
         command.add_argument("--canon", default="")
         command.add_argument("--allow", default="sitewatch/allowlist.txt")
         command.add_argument("--offline", action="store_true")
+        command.add_argument("--only", default="", help="файл со списком страниц (по одной в строке)")
 
     pre = sub.add_parser("preflight")
     add_common(pre)
@@ -197,7 +198,14 @@ def cmd_scan(args) -> int:
         root = Path(tempfile.mkdtemp(prefix="sitewatch-"))
         limit = 200 if args.cmd == "fast" else 400
         stage(args.base, root, limit)
-    findings, urls = scan(root, args.base, canon, allow_rows)
+    only = None
+    if getattr(args, "only", ""):
+        only = {
+            line.strip().lstrip("/")
+            for line in Path(args.only).read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")
+        }
+    findings, urls = scan(root, args.base, canon, allow_rows, only)
     if args.cmd == "nightly":
         geo = geometry_check([args.base], canon, available=False if args.offline else None)
         state["geometry"] = "skipped" if any(item.action == "skipped" for item in geo) else "ran"

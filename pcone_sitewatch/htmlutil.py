@@ -95,6 +95,7 @@ class _Parser(HTMLParser):
         self.visible: list[str] = []
         self.hours: list[dict] = []
         self.hours_depth = 0
+        self.hours_tag = ""
         self.hours_buf: list[str] = []
         self.hours_line = 0
         self.metas: dict[str, str] = {}
@@ -133,9 +134,10 @@ class _Parser(HTMLParser):
             self.blue_strip.append(f"blue-strip element <{tag}> at line {line}")
         if "p7c-hours" in classes or "hours" in classes:
             if self.hours_depth == 0:
+                self.hours_tag = tag
                 self.hours_buf = []
                 self.hours_line = line
-            self.hours_depth += 1
+            self.hours_depth = 1
         if tag == "meta":
             name = attr.get("name", "").lower()
             prop = attr.get("property", "").lower()
@@ -179,15 +181,13 @@ class _Parser(HTMLParser):
         if self.hours_depth and tag in {"p", "div", "table", "section", "span"}:
             # depth is counted on start; close when the hours element ends is approximate
             pass
-        if self.hours_depth:
-            self.hours_depth -= 1
-            if self.hours_depth <= 0:
-                text = re.sub(r"[ \t]+", " ", "".join(self.hours_buf))
-                text = re.sub(r" *\n *", "\n", text).strip()
-                if text:
-                    self.hours.append({"text": text, "line": self.hours_line})
-                self.hours_depth = 0
-                self.hours_buf = []
+        if self.hours_depth and tag == self.hours_tag:
+            self.hours_depth = 0
+            text = re.sub(r"[ \t]+", " ", "".join(self.hours_buf))
+            text = re.sub(r" *\n *", "\n", text).strip()
+            if text:
+                self.hours.append({"text": text, "line": self.hours_line})
+            self.hours_buf = []
         if tag == "a" and self._anchor is not None:
             self._anchor["text"] = "".join(self._anchor["text"]).strip()
             self.links.append(self._anchor)
@@ -207,19 +207,49 @@ class _Parser(HTMLParser):
                 self.hours_buf.append(data)
 
 
+_VOID_TAGS = {
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+    "param", "source", "track", "wbr", "path", "circle", "rect", "line", "polygon",
+    "polyline", "use", "stop", "ellipse", "defs", "g",
+}
+
+
 def _hours_blocks(html: str) -> list[dict]:
+    """Extract elements whose class is hours / p7c-hours, honouring nesting.
+
+    The old version matched with a non-greedy `.*?</tag>`, so any outer element
+    swallowed the inner hours block and the fallback parser truncated the line at
+    the first nested tag. Both left only "א׳ 9:00-19:00" and produced false
+    HOURS_TEXT findings on almost every page.
+    """
     blocks = []
-    pattern = re.compile(
-        r"<(p|div|table|span|section)\b([^>]*)>(.*?)</\1>",
-        re.I | re.S,
-    )
-    for match in pattern.finditer(html or ""):
+    head = re.compile(r"""<(p|div|table|span|section)\b((?:"[^"]*"|'[^']*'|[^>"'])*)>""", re.I)
+    tag_re = re.compile(r"<(/)?([a-zA-Z][\w:-]*)\b[^>]*?(/)?>")
+    for match in head.finditer(html or ""):
         attrs = match.group(2)
-        if not re.search(r"""class\s*=\s*['"][^'"]*\bhours\b[^'"]*['"]""", attrs, re.I) and not re.search(
-            r"""class\s*=\s*['"][^'"]*p7c-hours[^'"]*['"]""", attrs, re.I
+        if not re.search(
+            r"""class\s*=\s*['"][^'"]*(?:p7c-hours|\bhours\b)[^'"]*['"]""", attrs, re.I
         ):
             continue
-        text = re.sub(r"<[^>]+>", " ", match.group(3))
+        depth = 1
+        start = match.end()
+        end = len(html)
+        for tag in tag_re.finditer(html, start):
+            name = tag.group(2).lower()
+            if name in _VOID_TAGS or tag.group(3):
+                continue
+            if tag.group(1):
+                depth -= 1
+                if depth == 0:
+                    end = tag.start()
+                    break
+            else:
+                depth += 1
+        inner = html[start:min(end, start + 3000)]
+        inner = re.sub(r"</(?:tr|p|div|li|table|section|h[1-6]|br)>|<br\s*/?>", "\n", inner, flags=re.I)
+        text = re.sub(r"<[^>]+>", " ", inner)
+        text = re.sub(r"[ \t]+", " ", text)
+        text = re.sub(r"\s*\n\s*", "\n", text)
         text = re.sub(r"\s+", " ", text).strip()
         if text:
             line = html[: match.start()].count("\n") + 1
@@ -250,10 +280,20 @@ def parse_html(html: str, page_url: str) -> dict:
     }
 
 
-def load_tree(root: Path, base: str) -> list[Page]:
-    pages = []
+def iter_tree(root: Path, base: str, only: set[str] | None = None):
+    """Yield pages one at a time so a 500-page tree does not have to fit in RAM.
+
+    Loading the whole tree at once (html + parsed views of every page) took >5 GB
+    on the live site and the kernel killed the run (exit 137) — that is one of the
+    reasons the night check never reported.
+    """
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root).as_posix()
+        if only is not None and rel not in only:
+            continue
         html = path.read_text(encoding="utf-8")
-        pages.append(Page(url_for_rel(base, rel), rel, html, root, path))
-    return pages
+        yield Page(url_for_rel(base, rel), rel, html, root, path)
+
+
+def load_tree(root: Path, base: str) -> list[Page]:
+    return list(iter_tree(root, base))
