@@ -38,6 +38,7 @@
 - HOURS_TEXT https://pconelab.co.il/apple/ru/about.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/apple/ru/contact.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/apple/ru/index.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
+- BANNED_CLAIM https://pconelab.co.il/apple/ru/index.html — авторизованный сервис Apple
 - HOURS_TEXT https://pconelab.co.il/apple/ru/liquid.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/apple/ru/prices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/apple/ru/screen.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
@@ -272,6 +273,9 @@
 - HOURS_TEXT https://pconelab.co.il/av/ar/beamer-c80white.html — break days mon,thu,tue,wed | BEAMER-C80WHITE — حامل سقفي للبروجكتور BEAMER-C80WHITE — تركيب سهل وضبط دقيق ل مشاريع PCone: متجر PCone PCone AV مختبر التصليح مستعمل جارٍ التحقق من سا
 - META_PRICE https://pconelab.co.il/av/ar/beamer-c80white.html — meta[name=description]: 890 ₪
 - OLD_HEADER https://pconelab.co.il/av/ar/beamer-c80white.html — <header> without Arena marker at line 103
+- HOURS_TEXT https://pconelab.co.il/av/ar/beamer-w050black.html — break days mon,thu,tue,wed | BEAMER-W050BLACK — حامل سقفي للبروجكتور BEAMER-W050BLACK — تركيب سهل وضبط دقيق مشاريع PCone: متجر PCone PCone AV مختبر التصليح مستعمل جارٍ التحقق من سا
+- META_PRICE https://pconelab.co.il/av/ar/beamer-w050black.html — meta[name=description]: 890 ₪
+- OLD_HEADER https://pconelab.co.il/av/ar/beamer-w050black.html — <header> without Arena marker at line 103
 - HOURS_TEXT https://pconelab.co.il/av/ar/index.html — break days mon,thu,tue,wed | PCone AV في نتانيا: سينما منزلية وموسيقى وشاشات بالتركيب مشاريع PCone: متجر PCone PCone AV مختبر التصليح مستعمل جارٍ التحقق من ساعات العمل… 09-834-5676
 - HOURS_JSONLD https://pconelab.co.il/av/ar/index.html — Sunday: 09:00-19:00; Monday: 10:00-19:00; Tuesday: 10:00-19:00; Wednesday: 10:00-19:00; Thursday: 10:00-19:00
 - OLD_HEADER https://pconelab.co.il/av/ar/index.html — <header> without Arena marker at line 78
@@ -382,6 +386,9 @@
 - HOURS_TEXT https://pconelab.co.il/av/en/beamer-c100.html — break days mon,thu,tue,wed | BEAMER-C100 — Projector ceiling mount BEAMER-C100 — easy install, precise PCone projects: PCone Store PCone AV Repair Lab Second Hand Checking opening 
 - META_PRICE https://pconelab.co.il/av/en/beamer-c100.html — meta[name=description]: 890 ₪
 - OLD_HEADER https://pconelab.co.il/av/en/beamer-c100.html — <header> without Arena marker at line 103
+- HOURS_TEXT https://pconelab.co.il/av/en/beamer-c80white.html — break days mon,thu,tue,wed | BEAMER-C80WHITE — Projector ceiling mount BEAMER-C80WHITE — easy install, prec PCone projects: PCone Store PCone AV Repair Lab Second Hand Checking ope
+- META_PRICE https://pconelab.co.il/av/en/beamer-c80white.html — meta[name=description]: 890 ₪
+- OLD_HEADER https://pconelab.co.il/av/en/beamer-c80white.html — <header> without Arena marker at line 103
 - HOURS_TEXT https://pconelab.co.il/av/fr/12--next-pro12a---full-range.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Dim 9:00-19:00
 - OLD_HEADER https://pconelab.co.il/av/fr/12--next-pro12a---full-range.html — <header> without Arena marker at line 96
 - HOURS_TEXT https://pconelab.co.il/av/fr/147-264.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Dim 9:00-19:00
@@ -471,6 +478,9 @@
 - HOURS_TEXT https://pconelab.co.il/av/fr/beamer-c100.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Dim 9:00-19:00
 - META_PRICE https://pconelab.co.il/av/fr/beamer-c100.html — meta[name=description]: 890 ₪
 - OLD_HEADER https://pconelab.co.il/av/fr/beamer-c100.html — <header> without Arena marker at line 103
+- HOURS_TEXT https://pconelab.co.il/av/fr/beamer-c80white.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Dim 9:00-19:00
+- META_PRICE https://pconelab.co.il/av/fr/beamer-c80white.html — meta[name=description]: 890 ₪
+- OLD_HEADER https://pconelab.co.il/av/fr/beamer-c80white.html — <header> without Arena marker at line 103
 - HOURS_TEXT https://pconelab.co.il/av/index.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_JSONLD https://pconelab.co.il/av/index.html — Sunday: 09:00-19:00; Monday: 10:00-19:00; Tuesday: 10:00-19:00; Wednesday: 10:00-19:00; Thursday: 10:00-19:00 | text: mon missing; tue missing; wed missing; thu missing; fri missin
 - OLD_HEADER https://pconelab.co.il/av/index.html — <header> without Arena marker at line 79
@@ -574,6 +584,10 @@
 - META_PRICE https://pconelab.co.il/av/ru/beamer-c100.html — meta[name=description]: 890 ₪
 - OLD_HEADER https://pconelab.co.il/av/ru/beamer-c100.html — <header> without Arena marker at line 103
 - WARRANTY_RU https://pconelab.co.il/av/ru/beamer-c100.html — BEAMER-C100 — Крепление для проектора BEAMER-C100 — простой монтаж, точное Проекты PCone: Магазин PCone PCone AV Лаборатория ремонтов Вторые руки Проверяем часы работы… 09-834-5676
+- HOURS_TEXT https://pconelab.co.il/av/ru/beamer-c80white.html — break labelled пн-чт/ב׳-ה׳; break days mon,thu,tue,wed | BEAMER-C80WHITE — Крепление для проектора BEAMER-C80WHITE — простой монтаж, то Проекты PCone: Магазин PCone PCone AV Лабора
+- META_PRICE https://pconelab.co.il/av/ru/beamer-c80white.html — meta[name=description]: 890 ₪
+- OLD_HEADER https://pconelab.co.il/av/ru/beamer-c80white.html — <header> without Arena marker at line 103
+- WARRANTY_RU https://pconelab.co.il/av/ru/beamer-c80white.html — BEAMER-C80WHITE — Крепление для проектора BEAMER-C80WHITE — простой монтаж, то Проекты PCone: Магазин PCone PCone AV Лаборатория ремонтов Вторые руки Проверяем часы работы… 09-834-
 - HOURS_TEXT https://pconelab.co.il/en/3d-creality.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Sun 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/en/404.html — break days mon,thu,tue,wed | 404 — Page not found | PCone Lab Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp 053-701-2069 
 - HOURS_TEXT https://pconelab.co.il/en/about.html — break days mon,thu,tue,wed | About PCone Lab - Family Repair Shop in Netanya Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsAp
