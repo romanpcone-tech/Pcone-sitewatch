@@ -36,10 +36,12 @@ def _candidates(lang_pos: int | None, dirs: list[str], name: str) -> list[str]:
             out.append("/".join(segs))
     else:
         out.append("/".join(dirs + [name]))
+        # языка в пути нет: язык мог стоять на любой позиции среди каталогов
+        # (`ru/about.html`, `apple/ru/about.html`, `parts/ru/p/a33-k55/index.html`).
+        # Перебираем все позиции — на живом дереве ложных пар не даёт (проверка 08.11).
         for lang in _LANGS:
-            out.append("/".join([lang] + dirs + [name]))
-            if dirs:
-                out.append("/".join(dirs + [lang] + [name]))
+            for i in range(len(dirs) + 1):
+                out.append("/".join(dirs[:i] + [lang] + dirs[i:] + [name]))
     seen, uniq = set(), []
     for c in out:
         if c not in seen:
