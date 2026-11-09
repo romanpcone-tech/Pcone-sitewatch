@@ -16,7 +16,7 @@ SCHEMA = {
     "sat": "Saturday",
 }
 _TIME = re.compile(r"(?<!\d)(\d{1,2}):(\d{2})\s*[-–—−]\s*(\d{1,2}):(\d{2})")
-_CLOSED = re.compile(r"закрыт|closed|ferm|סגור|مغلق", re.I)
+_CLOSED = re.compile(r"закрыт|выходн|closed|ferm|סגור|مغلق", re.I)
 _HE_RANGE = re.compile(r"([אבגדהו])[׳'\u05f3\u2019]?\s*[-–—−]\s*([אבגדהו])[׳'\u05f3\u2019]?")
 _HE = {"א": 0, "ב": 1, "ג": 2, "ד": 3, "ה": 4, "ו": 5}
 _RANGES = [
@@ -52,10 +52,18 @@ _SINGLES = [
     (re.compile(r"\bsaturday\b|\bsat\b", re.I), "sat"),
     (re.compile(r"\bdimanche\b|\bdim\b", re.I), "sun"),
     (re.compile(r"\blundi\b|\blun\b", re.I), "mon"),
+    (re.compile(r"\bmardi\b|\bmar\b", re.I), "tue"),
+    (re.compile(r"\bmercredi\b|\bmer\b", re.I), "wed"),
     (re.compile(r"\bjeudi\b|\bjeu\b", re.I), "thu"),
     (re.compile(r"\bvendredi\b|\bven\b", re.I), "fri"),
     (re.compile(r"\bsamedi\b|\bsam\b", re.I), "sat"),
     (re.compile(r"ראשון"), "sun"),
+    # שני/שלישי/רביעי/חמישי без огласовки совпадают с обычными словами («שני» = два,
+    # «שני» = второй), поэтому берём их только когда сразу за словом идёт время дня.
+    (re.compile(r"(?<![א-ת])(?:יום\s+)?שני\s*:?\s*(?=\d{1,2}:\d{2})"), "mon"),
+    (re.compile(r"(?:יום\s+)?שלישי\s*:?\s*(?=\d{1,2}:\d{2})"), "tue"),
+    (re.compile(r"(?:יום\s+)?רביעי\s*:?\s*(?=\d{1,2}:\d{2})"), "wed"),
+    (re.compile(r"(?:יום\s+)?חמישי\s*:?\s*(?=\d{1,2}:\d{2})"), "thu"),
     (re.compile(r"שישי"), "fri"),
     (re.compile(r"שבת"), "sat"),
     (re.compile(r"א[׳'\u05f3\u2019]"), "sun"),
@@ -66,6 +74,8 @@ _SINGLES = [
     (re.compile(r"ו[׳'\u05f3\u2019]"), "fri"),
     (re.compile(r"الأحد"), "sun"),
     (re.compile(r"الاثنين|الإثنين"), "mon"),
+    (re.compile(r"الثلاثاء"), "tue"),
+    (re.compile(r"الأربعاء|الاربعاء"), "wed"),
     (re.compile(r"الخميس"), "thu"),
     (re.compile(r"الجمعة"), "fri"),
     (re.compile(r"السبت"), "sat"),
@@ -164,6 +174,7 @@ def read_visible(text: str, canon: dict) -> dict:
     break_ranges: list[tuple[str, str]] = []
     labelled_defect = False
     saw = False
+    spans_by_day: dict[str, list[tuple[str, str]]] = {}
     defect_labels = [_norm_label(item) for item in canon["hours"].get("defect_if_labelled") or []]
     for segment in segments(text):
         norm = _norm_label(segment)
@@ -209,7 +220,21 @@ def read_visible(text: str, canon: dict) -> dict:
             for day in last_days:
                 if day == "sat":
                     continue
-                opens[day] = span
+                spans_by_day.setdefault(day, []).append(span)
+    # День может быть записан двумя интервалами в одной ячейке
+    # («Пн-чт 10:00-13:30, 15:00-19:00»): это день с перерывом, а не два разных дня.
+    # Склеиваем: открытие — начало первого интервала, закрытие — конец последнего,
+    # разрыв между интервалами считаем перерывом этих дней.
+    for day, day_spans in spans_by_day.items():
+        ordered = sorted(set(day_spans))
+        if len(ordered) == 1:
+            opens[day] = ordered[0]
+            continue
+        opens[day] = (ordered[0][0], ordered[-1][1])
+        for prev, nxt in zip(ordered, ordered[1:]):
+            if prev[1] < nxt[0]:
+                break_ranges.append((prev[1], nxt[0]))
+                break_days.add(day)
     return {
         "saw": saw,
         "opens": opens,

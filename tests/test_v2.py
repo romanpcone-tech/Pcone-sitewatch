@@ -165,12 +165,18 @@ def test_canon_edit_changes_hours_without_code_edit(tmp_path: Path):
     assert hours_text.check(good, edited)
 
 
-def test_hebrew_break_label_is_a_defect():
+def test_hebrew_break_label_inside_weekdays_is_accepted():
+    # Решение владельца 03.11.2026: перерыв вс–чт, сайт пишет его внутри ב׳-ה׳ — это норма.
     canon = load()
-    bad = "א׳ 09:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00) · ו׳ 09:00-14:00 · שבת סגור"
-    good = "א׳ 09:00-19:00 · ב׳-ה׳ 10:00-19:00 · ו׳ 09:00-14:00 · שבת סגור · הפסקה 13:30-15:00 (א׳-ה׳)"
-    assert visible_problem(read_visible(bad, canon), canon)
-    assert visible_problem(read_visible(good, canon), canon) is None
+    line = "א׳ 09:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00) · ו׳ 09:00-14:00 · שבת סגור"
+    assert visible_problem(read_visible(line, canon), canon) is None
+
+
+def test_break_on_friday_is_a_defect():
+    canon = load()
+    line = "א׳ 09:00-19:00 · ב׳-ה׳ 10:00-19:00 · ו׳ 09:00-14:00 · שבת סגור · הפסקה 13:30-15:00 (ו׳)"
+    problem = visible_problem(read_visible(line, canon), canon)
+    assert problem and "break on fri" in problem
 
 
 def test_each_rule_positive_and_negative(tmp_path: Path):
