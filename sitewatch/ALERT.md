@@ -196,7 +196,7 @@
 - HOURS_TEXT https://pconelab.co.il/oneplus-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/pc-case-swap.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/pc-cooling-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/pc-parts-check.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | שעות פעילות א׳ (ראשון) 9:00-19:00 ב׳-ה׳ 10:00-13:30, 15:00-19:00 ו׳ (שישי) 9:00-14:00 שבת סגור הפסקה 13: מעבדת תיקונים עצמאית בנתניה ·
+- HOURS_TEXT https://pconelab.co.il/pc-parts-check.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | בדיקת תאימות רכיבי מחשב בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 W
 - HOURS_TEXT https://pconelab.co.il/phone-photos-backup.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/phone-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - META_PRICE https://pconelab.co.il/phone-repair.html — meta[property=og:description]: 900 ₪
