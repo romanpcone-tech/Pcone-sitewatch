@@ -245,7 +245,7 @@ def _hours_blocks(html: str) -> list[dict]:
                     break
             else:
                 depth += 1
-        inner = html[start:min(end, start + 3000)]
+        inner = html[start:min(end, start + 20000)]
         inner = re.sub(r"</(?:tr|p|div|li|table|section|h[1-6]|br)>|<br\s*/?>", "\n", inner, flags=re.I)
         text = re.sub(r"<[^>]+>", " ", inner)
         text = re.sub(r"[ \t]+", " ", text)

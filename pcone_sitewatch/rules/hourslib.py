@@ -52,18 +52,18 @@ _SINGLES = [
     (re.compile(r"\bsaturday\b|\bsat\b", re.I), "sat"),
     (re.compile(r"\bdimanche\b|\bdim\b", re.I), "sun"),
     (re.compile(r"\blundi\b|\blun\b", re.I), "mon"),
-    (re.compile(r"\bmardi\b|\bmar\b", re.I), "tue"),
-    (re.compile(r"\bmercredi\b|\bmer\b", re.I), "wed"),
+    (re.compile(r"\bmardi\b|\bmar(?=\.?\s*[,:]?\s*\d{1,2}:\d{2})", re.I), "tue"),
+    (re.compile(r"\bmercredi\b|\bmer(?=\.?\s*[,:]?\s*\d{1,2}:\d{2})", re.I), "wed"),
     (re.compile(r"\bjeudi\b|\bjeu\b", re.I), "thu"),
     (re.compile(r"\bvendredi\b|\bven\b", re.I), "fri"),
     (re.compile(r"\bsamedi\b|\bsam\b", re.I), "sat"),
     (re.compile(r"ראשון"), "sun"),
     # שני/שלישי/רביעי/חמישי без огласовки совпадают с обычными словами («שני» = два,
-    # «שני» = второй), поэтому берём их только когда сразу за словом идёт время дня.
-    (re.compile(r"(?<![א-ת])(?:יום\s+)?שני\s*:?\s*(?=\d{1,2}:\d{2})"), "mon"),
-    (re.compile(r"(?:יום\s+)?שלישי\s*:?\s*(?=\d{1,2}:\d{2})"), "tue"),
-    (re.compile(r"(?:יום\s+)?רביעי\s*:?\s*(?=\d{1,2}:\d{2})"), "wed"),
-    (re.compile(r"(?:יום\s+)?חמישי\s*:?\s*(?=\d{1,2}:\d{2})"), "thu"),
+    # «שלישי» = третий), поэтому берём их только когда сразу за словом идёт время дня.
+    (re.compile(r"(?<![א-ת])(?:יום\s+)?שני[׳']?\s*[,.:]?\s*(?=\d{1,2}:\d{2})"), "mon"),
+    (re.compile(r"(?<![א-ת])(?:יום\s+)?שלישי[׳']?\s*[,.:]?\s*(?=\d{1,2}:\d{2})"), "tue"),
+    (re.compile(r"(?<![א-ת])(?:יום\s+)?רביעי[׳']?\s*[,.:]?\s*(?=\d{1,2}:\d{2})"), "wed"),
+    (re.compile(r"(?<![א-ת])(?:יום\s+)?חמישי[׳']?\s*[,.:]?\s*(?=\d{1,2}:\d{2})"), "thu"),
     (re.compile(r"שישי"), "fri"),
     (re.compile(r"שבת"), "sat"),
     (re.compile(r"א[׳'\u05f3\u2019]"), "sun"),
@@ -270,6 +270,12 @@ def visible_problem(read: dict, canon: dict) -> str | None:
             bad.append("break days " + ",".join(sorted(read["break_days"] - needed - forbidden)))
         if forbidden & read["break_days"]:
             bad.append("break on " + ",".join(sorted(forbidden & read["break_days"])))
+        # Перерыв может быть записан двумя интервалами дня: тогда сверяем и его время,
+        # иначе страница с перерывом «13:00-14:00» проходит, потому что часы дня сходятся.
+        br = canon_break(canon)
+        wrong = sorted({f"{a}-{b}" for a, b in read["break_ranges"] if (a, b) != br})
+        if wrong:
+            bad.append(f"break {','.join(wrong)} instead of {br[0]}-{br[1]}")
     elif read["saw"] and not read["break_ranges"]:
         bad.append("lunch break missing")
     if not bad:

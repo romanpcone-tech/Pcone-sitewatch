@@ -73,10 +73,14 @@ def test_two_intervals_wrong_close_is_still_flagged():
     assert problem and "mon 10:00-20:00" in problem
 
 
-def test_two_intervals_wrong_gap_is_not_swallowed():
-    bad = "Вс 9:00-19:00 · Пн-Чт 10:00-13:30, 16:00-19:00 · Пт 9:00-14:00 · Сб закрыто"
-    read = read_visible(bad, CANON)
-    assert ("13:30", "16:00") in read["break_ranges"]
+def test_wrong_break_time_is_flagged():
+    # Часы дня сходятся, а перерыв другой — это дефект «неверные часы», а не норма.
+    for gap in ("13:00-14:00", "13:30-16:00"):
+        start, end = gap.split("-")
+        bad = f"Вс 9:00-19:00 · Пн-Чт 10:00-{start}, {end}-19:00 · Пт 9:00-14:00 · Сб закрыто"
+        problem = visible_problem(read_visible(bad, CANON), CANON)
+        assert problem, f"перерыв {gap} не поймали"
+        assert gap in problem and "13:30-15:00" in problem, problem
 
 
 def test_hebrew_full_day_names_are_days():
@@ -128,3 +132,29 @@ def test_russian_vyhodnoy_means_closed():
     read = read_visible("Вс 9:00-19:00 · Пн-Чт 10:00-19:00 · Пт 9:00-14:00 · Сб выходной · перерыв 13:30-15:00", CANON)
     assert read["sat_closed"] is True
     assert visible_problem(read, CANON) is None
+
+
+def test_hebrew_day_with_punctuation_is_a_day():
+    assert _days("יום שני, 10:00-19:00") == {"mon"}
+    assert _days("שלישי׳ 10:00-19:00") == {"tue"}
+
+
+def test_french_short_names_need_a_time_next_to_them():
+    assert _days("Mar 10:00-19:00") == {"tue"}
+    assert _days("Mer. 10:00-19:00") == {"wed"}
+    assert _days("eau de mer") == set()
+
+
+def test_long_widget_container_is_not_cut(tmp_path: Path):
+    # Контейнер виджета читается целиком: если текст обрезан, хвостовые дни «теряются»
+    # и дочерние блоки снова проверяются поодиночке (так и появлялись ложные находки).
+    filler = "<span>Приёмка, диагностика и выдача заказов в мастерской на Биньямин</span>" * 60
+    days = (
+        "<span>Вс 9:00-19:00</span><span>Пн-Чт 10:00-13:30, 15:00-19:00</span>"
+        "<span>Пт 9:00-14:00</span><span>Сб закрыто</span>"
+    )
+    page = _page(f'<div class="p7c-hours">{filler}{days}</div>', tmp_path)
+    text = page.parsed()["hours"][0]["text"]
+    assert len(text) > 3000
+    assert "закрыто" in text
+    assert hours_text.check(page, CANON) == []
