@@ -10,9 +10,9 @@
 - HOURS_TEXT https://pconelab.co.il/apple.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/ar/index.html — sun missing; mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | الأحد
 - HOURS_TEXT https://pconelab.co.il/article-bsod.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-compact-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/article-compact-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | מחשב קומפקטי או מארז רגיל: מה להרכיב? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsApp 053
 - HOURS_TEXT https://pconelab.co.il/article-data-recovery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-first-gaming-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/article-first-gaming-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | מחשב גיימינג ראשון לילד או לנער: מה באמת חשוב? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 Wha
 - HOURS_TEXT https://pconelab.co.il/article-gaming-budget.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gaming-price.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - META_PRICE https://pconelab.co.il/article-gaming-price.html — meta[name=description]: 000 ₪, 000 ₪
@@ -24,7 +24,7 @@
 - META_PRICE https://pconelab.co.il/article-gaming-ready-vs-custom.html — meta[name=twitter:description]: 056 ₪, 070 ₪
 - HOURS_TEXT https://pconelab.co.il/article-gpu-compare.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-hdmi-no-signal.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-laptop-or-desktop.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/article-laptop-or-desktop.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | לפטופ גיימינג או מחשב נייח: מה לקנות? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsApp 053
 - HOURS_TEXT https://pconelab.co.il/article-laptop-slow.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-macbook-battery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-macbook-no-power.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -59,7 +59,7 @@
 - HOURS_TEXT https://pconelab.co.il/data.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/deals.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/devices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/discount.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/discount.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/en/3d-creality.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Sun 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/en/about.html — sun 10:00-19:00 | About PCone Lab - Family Repair Shop in Netanya Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp 053-701-2
 - HOURS_TEXT https://pconelab.co.il/en/accessibility.html — sun 10:00-19:00 | Accessibility Statement in Netanya | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp 053-701-2069 H
@@ -536,7 +536,7 @@
 - HOURS_TEXT https://pconelab.co.il/samsung-charging-port-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/samsung-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/samsung.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/screen-model.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/screen-model.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/services.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/simple.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/ssd-data-recovery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -549,7 +549,7 @@
 - HOURS_TEXT https://pconelab.co.il/vacuum-parts.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/valorant.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/video-editing-pc.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/viewboard.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
+- HOURS_TEXT https://pconelab.co.il/viewboard.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/water-damage-signs.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/water.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/whatsapp-transfer.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
