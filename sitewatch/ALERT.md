@@ -13,9 +13,7 @@
 - HOURS_TEXT https://pconelab.co.il/article-first-gaming-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | מחשב גיימינג ראשון לילד או לנער: מה באמת חשוב? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ני
 - HOURS_TEXT https://pconelab.co.il/article-gaming-budget.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gaming-price.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- META_PRICE https://pconelab.co.il/article-gaming-price.html — meta[name=twitter:description]: 000 ₪, 000 ₪
 - HOURS_TEXT https://pconelab.co.il/article-gaming-ready-vs-custom.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- META_PRICE https://pconelab.co.il/article-gaming-ready-vs-custom.html — meta[name=twitter:description]: 056 ₪, 070 ₪
 - HOURS_TEXT https://pconelab.co.il/article-gpu-compare.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-hdmi-no-signal.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-laptop-or-desktop.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | לפטופ גיימינג או מחשב נייח: מה לבחור? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-83
@@ -30,7 +28,6 @@
 - HOURS_TEXT https://pconelab.co.il/article-ps5-noise.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | א׳ 9:00-19:00 · ב׳-ה׳ 10:00-19:00 (הפסקה 13:30-15:00 , א׳-ה׳) · ו׳ 9:00-14:00 · שבת סגור
 - HOURS_TEXT https://pconelab.co.il/article-ssd-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-upgrade-or-new-build.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- META_PRICE https://pconelab.co.il/article-upgrade-or-new-build.html — meta[name=twitter:description]: 700 ₪, 056 ₪
 - HOURS_TEXT https://pconelab.co.il/article-xbox-no-power.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/articles.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/brand-acer.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -44,7 +41,6 @@
 - HOURS_TEXT https://pconelab.co.il/brand-lenovo.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/brand-lenovo.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/cleaning.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/compare-phones.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/compare.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/computer-data-transfer.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/computers.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -69,7 +65,6 @@
 - HOURS_TEXT https://pconelab.co.il/en/article-gaming-budget.html — sun 10:00-19:00; break on fri,sat | How to Choose a Gaming PC Without Overspending | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8
 - HOURS_TEXT https://pconelab.co.il/en/article-gaming-price.html — sun 10:00-19:00; break on fri,sat | Gaming PC cost in 2026: four price levels | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-834567
 - HOURS_TEXT https://pconelab.co.il/en/article-gaming-ready-vs-custom.html — sun 10:00-19:00; break on fri,sat | Ready-made gaming PC or custom build? | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 Wh
-- META_PRICE https://pconelab.co.il/en/article-gaming-ready-vs-custom.html — meta[name=twitter:description]: 056 ₪, 070 ₪
 - HOURS_TEXT https://pconelab.co.il/en/article-gpu-compare.html — sun 10:00-19:00; break on fri,sat | RX 9060 XT or RTX 5060 Ti: which to choose? | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345
 - HOURS_TEXT https://pconelab.co.il/en/article-hdmi-no-signal.html — sun 10:00-19:00; break on fri,sat | Black screen and no HDMI signal? A safe checklist | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 0
 - HOURS_TEXT https://pconelab.co.il/en/article-laptop-or-desktop.html — sun 10:00-19:00; break on fri,sat | Gaming laptop or desktop PC: which to choose? | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-83
@@ -96,10 +91,6 @@
 - BANNED_CLAIM https://pconelab.co.il/en/brand-hp.html — urgent diagnostics
 - HOURS_TEXT https://pconelab.co.il/en/brand-lenovo.html — sun 10:00-19:00; break on fri,sat | Lenovo Repair in Netanya: ThinkPad, IdeaPad, Legion, Yoga Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 0
 - BANNED_CLAIM https://pconelab.co.il/en/brand-lenovo.html — urgent diagnostics
-- HOURS_TEXT https://pconelab.co.il/en/cleaning.html — sun 10:00-19:00; break on fri,sat | PC cleaning in Netanya: dust and thermal-paste replacement | PCone Lab Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya
-- HOURS_TEXT https://pconelab.co.il/en/compare-phones.html — sun 10:00-19:00; break on fri,sat | Phone Comparison in Netanya | PCone Lab Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp
-- HOURS_TEXT https://pconelab.co.il/en/compare.html — sun 10:00-19:00; break on fri,sat | Compare devices in Netanya | PCone Lab Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp 
-- HOURS_TEXT https://pconelab.co.il/en/computer-data-transfer.html — sun 10:00-19:00; break on fri,sat | Moving data to a new computer in Netanya: files and email | PCone Lab Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya 
 - HOURS_TEXT https://pconelab.co.il/en/index.html — sun missing; mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Sunday
 - HOURS_TEXT https://pconelab.co.il/engraving.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/faq.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -220,13 +211,17 @@
 - HOURS_TEXT https://pconelab.co.il/iphone-18.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/iphone-18.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/iphone-battery-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת סוללה ל-iPhone בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 
-- HOURS_TEXT https://pconelab.co.il/iphone-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/iphone-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת מסך iPhone בנתניה: מקורי או תואם | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 
 - HOURS_TEXT https://pconelab.co.il/iphone.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/iphone.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/jbl.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/laptop-charging-port-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-cleaning.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/laptop-keyboard-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/laptop-motherboard-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-no-power.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | מחשב נייד לא נדלק: אבחון ותיקון בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 
+- HOURS_TEXT https://pconelab.co.il/laptop-prices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/laptop-repair-or-buy.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת מסך למחשב נייד בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 
 - HOURS_TEXT https://pconelab.co.il/laptop-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-water-damage.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -255,10 +250,9 @@
 - BANNED_CLAIM https://pconelab.co.il/pc-case-swap.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/pc-cooling-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/pc-cooling-upgrade.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/pc-parts-check.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | בדיקת תאימות רכיבי מחשב בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 W
+- HOURS_TEXT https://pconelab.co.il/pc-parts-check.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/phone-photos-backup.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/phone-photos-backup.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/phone-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/phone-sea-pool-water.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/phones.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/prices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -289,7 +283,6 @@
 - WARRANTY_RU https://pconelab.co.il/ru/article-gaming-budget.html — Как выбрать игровой ПК и не переплачивать | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN F
 - HOURS_TEXT https://pconelab.co.il/ru/article-gaming-price.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Сколько стоит игровой ПК в 2026 — четыре уровня цены | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Не
 - HOURS_TEXT https://pconelab.co.il/ru/article-gaming-ready-vs-custom.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Готовый игровой ПК или сборка под заказ: что лучше | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нета
-- META_PRICE https://pconelab.co.il/ru/article-gaming-ready-vs-custom.html — meta[name=twitter:description]: 056 ₪, 070 ₪
 - WARRANTY_RU https://pconelab.co.il/ru/article-gaming-ready-vs-custom.html — Готовый игровой ПК или сборка под заказ: что лучше | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 H
 - HOURS_TEXT https://pconelab.co.il/ru/article-gpu-compare.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | RX 9060 XT или RTX 5060 Ti: что выбрать? | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршру
 - WARRANTY_RU https://pconelab.co.il/ru/article-gpu-compare.html — RX 9060 XT или RTX 5060 Ti: что выбрать? | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR
@@ -334,7 +327,6 @@
 - HOURS_TEXT https://pconelab.co.il/ru/brand-lenovo.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Ремонт Lenovo в Нетании: ThinkPad, IdeaPad, Legion, Yoga Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетани
 - WARRANTY_RU https://pconelab.co.il/ru/brand-lenovo.html — Ремонт Lenovo в Нетании: ThinkPad, IdeaPad, Legion, Yoga Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE 
 - HOURS_TEXT https://pconelab.co.il/ru/cleaning.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri | Чистка компьютера в Нетании: пыль и замена термопасты | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · 
-- HOURS_TEXT https://pconelab.co.il/ru/compare-phones.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Сравнение телефонов в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-83
 - HOURS_TEXT https://pconelab.co.il/ru/compare.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Сравнение устройств в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания
 - HOURS_TEXT https://pconelab.co.il/ru/computer-data-transfer.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Перенос данных на новый компьютер в Нетании: файлы и почта | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Ла
 - HOURS_TEXT https://pconelab.co.il/ru/computers.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | Ремонт стационарных ПК в Нетании: дом и офис | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинха
@@ -349,8 +341,8 @@
 - WARRANTY_RU https://pconelab.co.il/ru/custom-pc.html — Сборка компьютера на заказ в Нетании: работа, монтаж, игры | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 05
 - HOURS_TEXT https://pconelab.co.il/ru/data.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | Восстановление данных в Нетании: диски, SSD и карты памяти | PCone Lab Перейти к содержимому Закрыто · воскресенье с
 - HOURS_TEXT https://pconelab.co.il/ru/deals.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Акции и скидки в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 
-- HOURS_TEXT https://pconelab.co.il/ru/devices.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Смартфоны и планшеты в наличии в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршру
-- WARRANTY_RU https://pconelab.co.il/ru/devices.html — Смартфоны и планшеты в наличии в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR
+- HOURS_TEXT https://pconelab.co.il/ru/devices.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Смартфоны и планшеты под заказ в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршру
+- WARRANTY_RU https://pconelab.co.il/ru/devices.html — Смартфоны и планшеты под заказ в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR
 - HOURS_TEXT https://pconelab.co.il/ru/discount.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Скидки на ремонт в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршру
 - HOURS_TEXT https://pconelab.co.il/ru/engraving.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Гравировка в Нетании: ноутбуки, консоли, подарки | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинха
 - HOURS_TEXT https://pconelab.co.il/ru/faq.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Частые вопросы о ремонте в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Не
@@ -485,15 +477,18 @@
 - BANNED_CLAIM https://pconelab.co.il/ru/iphone-18.html — авторизованный сервис Apple
 - WARRANTY_RU https://pconelab.co.il/ru/iphone-18.html — Ремонт iPhone 18 в Нетании: экран и батарея Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR AR Р
 - HOURS_TEXT https://pconelab.co.il/ru/iphone-battery-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Замена батареи iPhone в Нетании: проверка и цена по серии | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:0
-- HOURS_TEXT https://pconelab.co.il/ru/iphone-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri | Ремонт iPhone в Нетании по моделям, от 11 до 17 | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас
-- BANNED_CLAIM https://pconelab.co.il/ru/iphone-repair.html — авторизованный сервис Apple
 - HOURS_TEXT https://pconelab.co.il/ru/iphone-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Замена экрана iPhone в Нетании: оригинальный или совместимый | PCone Lab Перейти к содержимому Закрыто · воскресенье с 0
 - HOURS_TEXT https://pconelab.co.il/ru/iphone.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | iPhone в Нетании: ремонт моделей 13–18 и магазин Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршру
 - WARRANTY_RU https://pconelab.co.il/ru/iphone.html — iPhone в Нетании: ремонт моделей 13–18 и магазин Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR
 - HOURS_TEXT https://pconelab.co.il/ru/jbl.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | JBL — колонки и наушники в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 
+- HOURS_TEXT https://pconelab.co.il/ru/laptop-charging-port-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Ноутбук не заряжается? Ремонт разъёма в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нет
 - HOURS_TEXT https://pconelab.co.il/ru/laptop-cleaning.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Чистка ноутбука в Нетании: пыль, вентилятор, термопаста | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 
 - WARRANTY_RU https://pconelab.co.il/ru/laptop-cleaning.html — Чистка ноутбука в Нетании: пыль, вентилятор, термопаста | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-7
+- HOURS_TEXT https://pconelab.co.il/ru/laptop-keyboard-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Ремонт клавиатуры и трекпада ноутбука в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нет
+- HOURS_TEXT https://pconelab.co.il/ru/laptop-motherboard-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Ремонт материнской платы ноутбука в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания
 - HOURS_TEXT https://pconelab.co.il/ru/laptop-no-power.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Ноутбук не включается: диагностика и ремонт в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · 
+- HOURS_TEXT https://pconelab.co.il/ru/laptop-prices.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Цены на ремонт ноутбуков в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 
+- HOURS_TEXT https://pconelab.co.il/ru/laptop-repair-or-buy.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Чинить ноутбук или купить новый? Калькулятор | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетани
 - HOURS_TEXT https://pconelab.co.il/ru/laptop-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Замена экрана ноутбука в Нетании, включая MacBook | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинх
 - HOURS_TEXT https://pconelab.co.il/ru/laptop-upgrade.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Апгрейд ноутбука в Нетании: SSD, память, что примет модель | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:
 - WARRANTY_RU https://pconelab.co.il/ru/laptop-upgrade.html — Апгрейд ноутбука в Нетании: SSD, память, что примет модель | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 05
@@ -530,11 +525,8 @@
 - WARRANTY_RU https://pconelab.co.il/ru/oneplus-repair.html — Ремонт OnePlus и OnePlus Nord в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN
 - HOURS_TEXT https://pconelab.co.il/ru/pc-case-swap.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Перенос ПК в новый корпус в Нетании: лучше продув Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршр
 - HOURS_TEXT https://pconelab.co.il/ru/pc-cooling-upgrade.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Улучшение охлаждения ПК в Нетании: тише и холоднее Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Марш
-- HOURS_TEXT https://pconelab.co.il/ru/pc-parts-check.html — sun 09:00-14:00; mon 09:00-14:00; tue 09:00-14:00; wed 09:00-14:00; thu 09:00-14:00; saturday not closed; break labelled пн-чт/ב׳-ה׳; break on fri,sat | Проверка совместимости комп
+- HOURS_TEXT https://pconelab.co.il/ru/pc-parts-check.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Проверка совместимости комплектующих ПК в Нетания | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Н
 - HOURS_TEXT https://pconelab.co.il/ru/phone-photos-backup.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Копия фото с телефона на компьютер или внешний диск в Нетания | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас
-- HOURS_TEXT https://pconelab.co.il/ru/phone-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Ремонт телефонов в Нетании: iPhone, Samsung и другие | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · П
-- BANNED_CLAIM https://pconelab.co.il/ru/phone-repair.html — авторизованный сервис Apple
-- WARRANTY_RU https://pconelab.co.il/ru/phone-repair.html — Ремонт телефонов в Нетании: iPhone, Samsung и другие | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-
 - HOURS_TEXT https://pconelab.co.il/ru/phone-sea-pool-water.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Телефон упал в море или бассейн? Обработка в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18
 - BANNED_CLAIM https://pconelab.co.il/ru/phone-sea-pool-water.html — авторизованный сервис Apple
 - HOURS_TEXT https://pconelab.co.il/ru/phones.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | Ремонт телефонов в Нетании: Xiaomi, Pixel, OnePlus | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пин
