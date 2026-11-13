@@ -6,17 +6,18 @@
 - HOURS_TEXT https://pconelab.co.il/ai.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/all-in-one-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/apple.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- OLD_HEADER https://pconelab.co.il/apple.html — <header> without Arena marker at line 325
 - HOURS_TEXT https://pconelab.co.il/ar/index.html — sun missing; mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | الأحد
 - HOURS_TEXT https://pconelab.co.il/article-bsod.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-compact-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | מחשב קומפקטי או מארז רגיל: מה להרכיב? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-83
+- HOURS_TEXT https://pconelab.co.il/article-compact-pc.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-data-recovery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-first-gaming-pc.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | מחשב גיימינג ראשון לילד או לנער: מה באמת חשוב? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ני
+- HOURS_TEXT https://pconelab.co.il/article-first-gaming-pc.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gaming-budget.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gaming-price.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gaming-ready-vs-custom.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-gpu-compare.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-hdmi-no-signal.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/article-laptop-or-desktop.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | לפטופ גיימינג או מחשב נייח: מה לבחור? | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-83
+- HOURS_TEXT https://pconelab.co.il/article-laptop-or-desktop.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-laptop-slow.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-macbook-battery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/article-macbook-no-power.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -53,7 +54,7 @@
 - HOURS_TEXT https://pconelab.co.il/deals.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/devices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/discount.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/en/3d-creality.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Sun 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/en/3d-creality.html — sun 10:00-19:00; break on fri,sat | 3D printers — every model we can order in Netanya | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsA
 - HOURS_TEXT https://pconelab.co.il/en/about.html — sun 10:00-19:00; break on fri,sat | About PCone Lab in Netanya | since 2007 Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 WhatsApp
 - HOURS_TEXT https://pconelab.co.il/en/accessibility.html — sun 10:00-19:00; break on fri,sat | Accessibility Statement in Netanya | PCone Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Directions 09-8345676 Whats
 - HOURS_TEXT https://pconelab.co.il/en/ai.html — sun 10:00-19:00; break on fri,sat | AI PCs in Netanya 2026: Builds for Local LLMs, Images and Video Skip to content Closed · opens Sunday 09:00 · 18 Pinhas Lavon St, Netanya Direct
@@ -124,7 +125,8 @@
 - BANNED_CLAIM https://pconelab.co.il/galaxy-z-fold-8.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/galaxy-z-fold-flip-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/galaxy-z-fold-flip-repair.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/gallery.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/gallery.html — sun 09:00-14:00; mon 09:00-14:00; tue 09:00-14:00; wed 09:00-14:00; thu 09:00-14:00; saturday not closed; break labelled пн-чт/ב׳-ה׳; break on fri,sat | גלריית תיקונים בנתניה | PCo
+- OLD_HEADER https://pconelab.co.il/gallery.html — <header> without Arena marker at line 99
 - HOURS_TEXT https://pconelab.co.il/gaming-laptop-gpu-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gaming-laptop-gpu-repair.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/gaming-laptop-hinge-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -144,13 +146,13 @@
 - HOURS_TEXT https://pconelab.co.il/gift-cards.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/google-pixel-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/google-pixel-repair.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/gpu-12vhpwr-connector.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | תיקון מחבר 12VHPWR בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsA
+- HOURS_TEXT https://pconelab.co.il/gpu-12vhpwr-connector.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gpu-12vhpwr-connector.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/gpu-artifacts.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | ארטיפקטים בכרטיס מסך בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 What
+- HOURS_TEXT https://pconelab.co.il/gpu-artifacts.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gpu-artifacts.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/gpu-maintenance.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | תחזוקת כרטיסי מסך בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsAp
+- HOURS_TEXT https://pconelab.co.il/gpu-maintenance.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gpu-maintenance.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/gpu-no-display.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | כרטיס מסך ללא תמונה בנתניה | PCone דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 Whats
+- HOURS_TEXT https://pconelab.co.il/gpu-no-display.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gpu-no-display.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/gpu-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/gpu-repair.html — אבחון דחוף
@@ -210,8 +212,8 @@
 - BANNED_CLAIM https://pconelab.co.il/iphone-18-pro.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/iphone-18.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/iphone-18.html — אבחון דחוף
-- HOURS_TEXT https://pconelab.co.il/iphone-battery-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת סוללה ל-iPhone בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 
-- HOURS_TEXT https://pconelab.co.il/iphone-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת מסך iPhone בנתניה: מקורי או תואם | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 
+- HOURS_TEXT https://pconelab.co.il/iphone-battery-replacement.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/iphone-screen-replacement.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/iphone.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - BANNED_CLAIM https://pconelab.co.il/iphone.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/jbl.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -219,10 +221,10 @@
 - HOURS_TEXT https://pconelab.co.il/laptop-cleaning.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-keyboard-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-motherboard-repair.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/laptop-no-power.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | מחשב נייד לא נדלק: אבחון ותיקון בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 
+- HOURS_TEXT https://pconelab.co.il/laptop-no-power.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-prices.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-repair-or-buy.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/laptop-screen-replacement.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | החלפת מסך למחשב נייד בנתניה | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 
+- HOURS_TEXT https://pconelab.co.il/laptop-screen-replacement.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptop-water-damage.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/laptops.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
@@ -266,7 +268,7 @@
 - BANNED_CLAIM https://pconelab.co.il/ps5-hdmi-repair.html — אבחון דחוף
 - HOURS_TEXT https://pconelab.co.il/psu-replacement.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/ram-upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/ru/3d-creality.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | Вс 9:00-19:00
+- HOURS_TEXT https://pconelab.co.il/ru/3d-creality.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | 3D-принтеры Creality: модели под заказ в Нетания | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה 
 - WARRANTY_RU https://pconelab.co.il/ru/3d-creality.html — 3D-принтеры Creality: модели под заказ в Нетания | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 09-8345676 WhatsApp 053-701-2069 HE RU EN FR AR תיקוני
 - HOURS_TEXT https://pconelab.co.il/ru/about.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on sat | О лаборатории PCone Lab в Нетании | с 2007 года Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Н
 - WARRANTY_RU https://pconelab.co.il/ru/about.html — О лаборатории PCone Lab в Нетании | с 2007 года Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN FR 
@@ -378,7 +380,8 @@
 - WARRANTY_RU https://pconelab.co.il/ru/galaxy-z-fold-8.html — Ремонт Galaxy Z Fold8 в Нетании: шарнир и два экрана Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU E
 - HOURS_TEXT https://pconelab.co.il/ru/galaxy-z-fold-flip-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | Ремонт Galaxy Z Fold и Z Flip в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лав
 - WARRANTY_RU https://pconelab.co.il/ru/galaxy-z-fold-flip-repair.html — Ремонт Galaxy Z Fold и Z Flip в Нетании | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-701-2069 HE RU EN
-- HOURS_TEXT https://pconelab.co.il/ru/gallery.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Галерея ремонтов в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 W
+- HOURS_TEXT https://pconelab.co.il/ru/gallery.html — sun 09:00-14:00; mon 09:00-14:00; tue 09:00-14:00; wed 09:00-14:00; thu 09:00-14:00; saturday not closed; break labelled пн-чт/ב׳-ה׳; break on fri,sat | Галерея ремонтов в Нетании 
+- OLD_HEADER https://pconelab.co.il/ru/gallery.html — <header> without Arena marker at line 99
 - HOURS_TEXT https://pconelab.co.il/ru/gaming-laptop-gpu-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Видеочип игрового ноутбука: вылеты, артефакты в Нетания | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон
 - WARRANTY_RU https://pconelab.co.il/ru/gaming-laptop-gpu-repair.html — Видеочип игрового ноутбука: вылеты, артефакты в Нетания | PCone Lab Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршрут 09-8345676 WhatsApp 053-7
 - HOURS_TEXT https://pconelab.co.il/ru/gaming-laptop-hinge-repair.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳ | Ремонт петель игрового ноутбука в Нетании | PCone Перейти к содержимому Закрыто · воскресенье с 09:00 · Пинхас Лавон 18, Нетания Маршр
@@ -595,7 +598,7 @@
 - HOURS_TEXT https://pconelab.co.il/tablets.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/terms.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/thermal-paste-replacement.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
-- HOURS_TEXT https://pconelab.co.il/transfer-data.html — sun 10:00-19:00; break labelled пн-чт/ב׳-ה׳; break on fri,sat | העברת נתונים בנתניה: מחשב, SSD וטלפון | PCone Lab דלג לתוכן סגור · ביום ראשון מ- 09:00 · פנחס לבון 18, נתניה ניווט 0
+- HOURS_TEXT https://pconelab.co.il/transfer-data.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/upgrade.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/vacuum-parts.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
 - HOURS_TEXT https://pconelab.co.il/valorant.html — mon missing; tue missing; wed missing; thu missing; fri missing; saturday not closed; lunch break missing | א׳ 9:00-19:00
