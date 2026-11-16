@@ -11,3 +11,8 @@ OLD_HEADER | https://pconelab.co.il/ar/gta6/article-regional-versions.html | kee
 
 # Footer link «Б/у техника» (Roman, 2026-10-27) is not a trade-in defect.
 # It is not one exact page URL, so it is not an allowlist line; BANNED_CLAIM reads allowlist_seed.
+HOURS_TEXT | https://pconelab.co.il/pc-parts-check.html | перерыв 13:30-15:00 восстановлен и проверен 09.11; правило ложно срабатывает на двух отрезках в одной ячейке — карточка на детектор | Ron, 2026-11-09
+HOURS_TEXT | https://pconelab.co.il/ru/pc-parts-check.html | перерыв 13:30-15:00 восстановлен и проверен 09.11; правило ложно срабатывает на двух отрезках в одной ячейке — карточка на детектор | Ron, 2026-11-09
+HOURS_TEXT | https://pconelab.co.il/en/pc-parts-check.html | перерыв 13:30-15:00 восстановлен и проверен 09.11; правило ложно срабатывает на двух отрезках в одной ячейке — карточка на детектор | Ron, 2026-11-09
+HOURS_TEXT | https://pconelab.co.il/fr/pc-parts-check.html | перерыв 13:30-15:00 восстановлен и проверен 09.11; правило ложно срабатывает на двух отрезках в одной ячейке — карточка на детектор | Ron, 2026-11-09
+HOURS_TEXT | https://pconelab.co.il/ar/pc-parts-check.html | перерыв 13:30-15:00 восстановлен и проверен 09.11; правило ложно срабатывает на двух отрезках в одной ячейке — карточка на детектор | Ron, 2026-11-09

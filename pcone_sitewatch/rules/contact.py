@@ -60,15 +60,34 @@ def check(page, canon: dict) -> list[Finding]:
     street = (contacts.get("address") or {}).get("street") or ""
     number = street.split()[-1] if street else ""
     visible = view["visible"]
-    if street and number and ("Lavon" in visible or "Pinhas" in visible) and street not in visible:
-        found.append(
-            Finding(
-                rule_id="CONTACT",
-                severity="medium",
-                url=page.url,
-                file=page.rel,
-                target="address",
-                evidence=f"address is not {street}",
-            )
-        )
+    if street and number and ("Lavon" in visible or "Pinhas" in visible):
+        # Точное совпадение — норма. Дальше различаем два разных случая, иначе 642 страницы
+        # каталога запчастей получали «medium» просто за адрес без номера дома
+        # («Pinhas Lavon St, Netanya» вместо «Pinhas Lavon 18»).
+        if street in visible:
+            pass
+        else:
+            other = re.search(r"Lavon[^\n\d]{0,14}(\d{1,3})", visible)
+            if other and other.group(1) != number:
+                found.append(
+                    Finding(
+                        rule_id="CONTACT",
+                        severity=severity(canon, "wrong address"),
+                        url=page.url,
+                        file=page.rel,
+                        target="address",
+                        evidence=f"address is not {street}",
+                    )
+                )
+            else:
+                found.append(
+                    Finding(
+                        rule_id="CONTACT",
+                        severity="info",
+                        url=page.url,
+                        file=page.rel,
+                        target="address",
+                        evidence=f"address without house number: {street}",
+                    )
+                )
     return found

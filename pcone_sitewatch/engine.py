@@ -42,9 +42,12 @@ def annotate(findings: list[Finding], pages, canon: dict, allow_rows) -> list[Fi
         asset_map = pages
     else:
         asset_map = {page.url: _assets_of(page) for page in pages}
+    # Правила, которые по решению владельца не считаются дефектом: находим,
+    # но помечаем справкой (info / report_only), чтобы не глушить настоящие поломки.
+    muted = {str(r).strip().upper() for r in (canon.get("muted_rules") or []) if str(r).strip()}
     groups: dict[tuple, list[Finding]] = {}
     for finding in findings:
-        if is_report_only_url(finding.url, canon):
+        if is_report_only_url(finding.url, canon) or finding.rule_id.upper() in muted:
             finding.severity = "info"
             finding.action = "report_only"
         row = match(allow_rows, finding.rule_id, finding.url)
