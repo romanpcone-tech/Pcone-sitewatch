@@ -9,6 +9,11 @@ from pcone_sitewatch.finding import Finding
 
 
 def check(page, canon: dict) -> list[Finding]:
+    # /av/ — отдельный мини-сайт «PCone AV» со своим брендом и своей шапкой.
+    # Решение Романа 20.11.2026: дизайн AV не трогаем, значит и «старая шапка»
+    # на этих страницах не дефект. Иначе 8 591 находка закрывает настоящие.
+    if page.rel.startswith("av/"):
+        return []
     hits = page.parsed().get("blue_strip") or []
     if not hits:
         return []
