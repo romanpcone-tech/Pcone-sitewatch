@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "mode": "nightly",
-  "started_at": "2026-11-22T09:50:47+02:00",
-  "ended_at": "2026-11-22T09:50:47+02:00",
-  "urls_checked": 1956,
+  "started_at": "2026-11-23T10:39:52+02:00",
+  "ended_at": "2026-11-23T10:39:52+02:00",
+  "urls_checked": 1165,
   "canon_sha256": "59f512238b2dbcccbc405baeff652ceab7418e3e79d9a8883f5f362ed2bba396",
   "status": "ok",
-  "last_run_utc": "2026-11-22T08:17:56+00:00",
-  "last_nightly_utc": "2026-11-22T08:17:56+00:00",
+  "last_run_utc": "2026-11-23T08:51:56+00:00",
+  "last_nightly_utc": "2026-11-23T08:51:56+00:00",
   "geometry": "ran",
   "rules_version": "v2"
 }
