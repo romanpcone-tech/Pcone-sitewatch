@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-26T11:14:40+02:00",
+  "last_run": "2026-11-27T11:29:13+02:00",
   "urls_checked": 1165,
   "published_at": "2026-11-04T23:04:48+02:00",
   "status": "ok",
@@ -7350,7 +7350,7 @@
       "rule_id": "WARRANTY_RU",
       "url": "https://pconelab.co.il/ru/index.html",
       "first_seen": "2026-11-05T04:00:28+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -7358,7 +7358,7 @@
       "severity": "info",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 23
+      "times_seen": 24
     },
     "fe87be65cd6fe164b7c61fd52d68431a1c2732bf": {
       "rule_id": "HOURS_TEXT",
@@ -41944,7 +41944,7 @@
       "rule_id": "OLD_HEADER",
       "url": "https://pconelab.co.il/ar/index.html",
       "first_seen": "2026-11-18T10:17:21+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -41952,7 +41952,7 @@
       "severity": "critical",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 9
+      "times_seen": 10
     },
     "e73bed402cee48453da3c4862e4afc450dac6b50": {
       "rule_id": "OLD_HEADER",
@@ -42980,7 +42980,7 @@
       "rule_id": "OLD_HEADER",
       "url": "https://pconelab.co.il/en/index.html",
       "first_seen": "2026-11-18T10:17:21+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -42988,7 +42988,7 @@
       "severity": "critical",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 9
+      "times_seen": 10
     },
     "45ea24d888707fe8ab2a6e04892116aad1b8cc91": {
       "rule_id": "OLD_HEADER",
@@ -43036,7 +43036,7 @@
       "rule_id": "OLD_HEADER",
       "url": "https://pconelab.co.il/fr/index.html",
       "first_seen": "2026-11-18T10:17:21+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -43044,7 +43044,7 @@
       "severity": "critical",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 9
+      "times_seen": 10
     },
     "3cbe3077db3104d964ef1bfe75c45a644038e78f": {
       "rule_id": "OLD_HEADER",
@@ -43680,7 +43680,7 @@
       "rule_id": "OLD_HEADER",
       "url": "https://pconelab.co.il/",
       "first_seen": "2026-11-18T10:17:21+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -43688,7 +43688,7 @@
       "severity": "critical",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 9
+      "times_seen": 10
     },
     "ad4c7ae2344c166b43e96e557525002879d35193": {
       "rule_id": "OLD_HEADER",
@@ -45836,7 +45836,7 @@
       "rule_id": "OLD_HEADER",
       "url": "https://pconelab.co.il/ru/index.html",
       "first_seen": "2026-11-18T10:17:21+02:00",
-      "last_seen": "2026-11-26T11:14:40+02:00",
+      "last_seen": "2026-11-27T11:29:13+02:00",
       "fixed_at": null,
       "recurrence": 0,
       "status": "open",
@@ -45844,7 +45844,7 @@
       "severity": "critical",
       "closed_by": null,
       "closed_at": null,
-      "times_seen": 9
+      "times_seen": 10
     },
     "edddf1796b2342be673947ca3b62952e047631c6": {
       "rule_id": "OLD_HEADER",
@@ -47471,7 +47471,7 @@
       "times_seen": 2
     }
   },
-  "started_at": "2026-11-26T11:14:40+02:00",
-  "last_nightly": "2026-11-26T11:14:40+02:00",
-  "last_nightly_utc": "2026-11-26T09:26:39+00:00"
+  "started_at": "2026-11-27T11:29:13+02:00",
+  "last_nightly": "2026-11-27T11:29:13+02:00",
+  "last_nightly_utc": "2026-11-27T09:41:22+00:00"
 }
